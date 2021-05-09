@@ -10,5 +10,7 @@ Application that registers teachers and students in order to practice my HTTP sk
 
 Note: Only HTML, CSS and a simple server have been added. HTTP protocol still yet to come.
 
+Images randomly generate by the Unsplash API
+
 
 ##### Developed by Caíque Rodrigues - Web Development Student :tada:
