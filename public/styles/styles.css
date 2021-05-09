@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+    --color-blue: #09264a;
+    --color-gray: #bbbbbb;
+    --color-gold: #f99820;
+    --color-white: #ffffff;
+    --color-baby-blue: #2081f9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--color-blue) ;
+}
+
+header{
+    background-color: var(--color-gold);
+    width: 100%;
+    padding: 32px;
+    text-align: center;
+}
+
+.links {
+    font-size: 24px;
+    letter-spacing: 0.7px;
+}
+
+.links a + a {
+    margin-left: 32px;
+}
+
+.links a.active {
+    font-weight: bold;
+    color: var(--color-baby-blue);
+}
+
+.links a{
+    text-decoration: none;
+    color: var(--color-white);
+    position: relative;
+}
+
+.links a::after {
+    content: "";
+    background-color: var(--color-baby-blue);
+    width: 0;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+}
+
+.links a:hover::after {
+    width: 100%;
+    transition: width 550ms ease-in-out;
+}
+
+/*=== CARD === */
+
+.card {
+    background-color: var(--color-gray);
+    width: 800px;
+    height: 600px;
+    margin: 45px auto;
+    display: grid;
+    grid-template-columns: 40% 60%;
+
+    box-shadow: 4px 4px 6px -2px rgba(0, 0, 0, 0.8);
+
+    animation: up 600ms ease;
+}
+
+@keyframes up {
+    from {
+        opacity: 0;
+        transform: translateY(200px);
+    }
+    
+    to {
+        opacity: 1;
+    }
+}
+
+/* details 
+
+Utilize o seletor nth-child() para estilizar o label
+(ex.: Desde) e valor (ex.: 02/02/2020) do item.
+*/
+
+.details { 
+    padding: 32px;
+}
+
+.details .item{
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 16px 0;
+}
+
+.details .item:first-of-type{
+    border: none;
+}
+
+.details h3,
+.details .item div:nth-child(1){
+    color: var(--color-baby-blue);
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.7px;
+    font-weight: normal;
+}
+
+.details .item div:nth-child(2){
+    font-weight: bold;
+    color: var(--color-blue);
+    font-size: 18px;
+}
+
+.details h3{
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    color: var(--color-white);
+}
+
+.details .item div:nth-child(2) span{
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: var(--color-white);
+    border-radius: 16px;
+    margin-right: 4px;
+    margin-top: 8px;
+    text-transform: uppercase;
+    font-size: 14px;
+}
