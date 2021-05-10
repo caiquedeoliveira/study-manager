@@ -1,0 +1,12 @@
+{
+  "teachers": [
+    {
+      "avatar_url": "https://google.com",
+      "name": "Caique Rodrigues",
+      "birth": "1997-06-08",
+      "schooling": "college",
+      "classtype": "away",
+      "services": "Geografia, Sociologia"
+    }
+  ]
+}
