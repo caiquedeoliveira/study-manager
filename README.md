@@ -5,7 +5,7 @@ Project being developed for Launchbase Bootcamp (Rocketseat).
 
 Application that registers teachers and students in order to practice my HTTP skills, using forms, adding, deleting...
 
-<img src="./public/assets/functionalities.gif">
+<img src="./public/assets/put-delete.gif">
 </div>
 
 Updated Notes: 

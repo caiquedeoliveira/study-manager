@@ -3,62 +3,12 @@
     {
       "id": 1,
       "avatar_url": "https://source.unsplash.com/collection/284731/500x500",
-      "name": "Caíque de Oliveira Rodrigues",
-      "birth": 865728000000,
-      "schooling": "college",
-      "classtype": "presencial",
-      "services": "Geografia, Sociologia",
-      "created_at": 1620820867103
-    },
-    {
-      "id": 2,
-      "avatar_url": "https://source.unsplash.com/collection/284731/500x500",
-      "name": "Isadora Vieira",
-      "birth": 937180800000,
-      "schooling": "highschool",
-      "classtype": "à distância",
-      "services": "Música",
-      "created_at": 1620820954968
-    },
-    {
-      "id": 3,
-      "avatar_url": "https://source.unsplash.com/collection/284731/500x500",
-      "name": "Linea Cayres",
-      "birth": 232243200000,
-      "schooling": "doctorate",
-      "classtype": "presencial",
-      "services": "Biologia, Química",
-      "created_at": 1620821300236
-    },
-    {
-      "id": 4,
-      "avatar_url": "https://source.unsplash.com/collection/284731/500x500",
-      "name": "João Luiz",
-      "birth": 39484800000,
-      "schooling": "master",
-      "classtype": "à distância",
-      "services": "Matemática",
-      "created_at": 1620821337653
-    },
-    {
-      "id": 5,
-      "avatar_url": "https://source.unsplash.com/collection/284731/500x500",
-      "name": "Livia Gomes",
-      "birth": 1022803200000,
-      "schooling": "highschool",
-      "classtype": "à distância",
-      "services": "Biologia, Matemática, Física",
-      "created_at": 1620823281663
-    },
-    {
-      "id": 6,
-      "avatar_url": "https://source.unsplash.com/collection/284731/500x500",
       "name": "John Doe",
-      "birth": 799891200000,
-      "schooling": "doctorate",
+      "birth": 950313600000,
+      "schooling": "master",
       "classtype": "presencial",
       "services": "Geografia, Sociologia",
-      "created_at": 1620823719009
+      "created_at": 1620847564608
     }
   ]
 }

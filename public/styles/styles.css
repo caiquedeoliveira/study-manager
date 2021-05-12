@@ -180,4 +180,18 @@ a.button {
     display: block;
     text-align: center;
     text-decoration: none;
+    width: 100%;
 }
+
+.button-side {
+    display: flex;
+}
+
+.button-side button + button {
+    margin-left: 12px;
+}
+
+.button-side button:nth-child(2){
+    background-color: lightcoral;
+}
+
