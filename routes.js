@@ -20,6 +20,8 @@ routes.get('/', (req, res) => {
 
     .get('/teachers/:id', teachers.show)
 
+    .get('/teachers/:id/edit', teachers.edit)
+
     .post('/teachers', teachers.post)
 
 
