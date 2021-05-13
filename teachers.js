@@ -86,8 +86,8 @@ exports.put = (req, res) => {
     const foundTeacher = data.teachers.find((teacher, foundIndex) => {
         if(teacher.id == id){
             index = foundIndex
+            return true
         }
-        return true
     })
 
     if(!foundTeacher) return res.send('Teacher not found!')
@@ -95,7 +95,8 @@ exports.put = (req, res) => {
     const teacher = {
         ...foundTeacher,
         ...req.body,
-        birth: Date.parse(req.body.birth)
+        birth: Date.parse(req.body.birth),
+        id: Number(req.body.id)
     }
 
     data.teachers[index] = teacher
