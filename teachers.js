@@ -2,6 +2,21 @@ const fs = require('fs')
 const data = require('./data.json')
 const { age, graduation, date } = require('./utils')
 
+// index
+
+exports.index = (req, res)=>{
+
+    const teachers = data.teachers.map(teacher => {
+        let newTeacher ={
+            ...teacher,
+            services: teacher.services.split(",")
+        }
+        return newTeacher
+    })
+
+    return res.render('teachers/index', {teachers})
+}
+
 // create
 exports.post = (req, res)=>{
     const keys = Object.keys(req.body)
