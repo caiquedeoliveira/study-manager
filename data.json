@@ -31,16 +31,6 @@
       "created_at": 1620906877352
     },
     {
-      "id": 4,
-      "avatar_url": "https://source.unsplash.com/collection/284731/500x500",
-      "name": "Roger Galdino",
-      "birth": 550540800000,
-      "schooling": "master",
-      "classtype": "presencial",
-      "services": "Geografia, Sociologia",
-      "created_at": 1620906904133
-    },
-    {
       "id": 5,
       "avatar_url": "https://source.unsplash.com/collection/284731/500x500",
       "name": "Maite Genoveva",
