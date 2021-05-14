@@ -1,0 +1,72 @@
+        <div class="item">
+            <div>Avatar URL</div>
+            <div>
+               <input 
+               type="url" 
+               name="avatar_url"
+               placeholder="http://"
+               value="{{student.avatar_url}}"> 
+            </div>
+        </div>
+
+        <div class="item">
+            <div>Nome completo</div>
+            <div>
+                <input
+                 type="text"
+                 name="name"
+                 placeholder="Insira seu nome"
+                 value="{{student.name}}">
+            </div>
+        </div>
+
+        <div class="item">
+            <div>Email</div>
+            <div>
+                <input
+                 type="email"
+                 name="email"
+                 placeholder="seuemail@com.br"
+                 value="{{student.email}}">
+            </div>
+        </div>
+
+        <div class="item">
+            <div>Data de nascimento</div>
+            <div>
+                <input 
+                type="date" 
+                name="birth"
+                value="{{student.birth}}">
+            </div>
+        </div>
+
+        <div class="item">
+            <div>Ano escolar</div>
+            <div>
+                <select name="school_year">
+                    <option value="5EF">5º ano do ensino fundamental</option>
+                    <option value="6EF">6º ano do ensino fundamental</option>
+                    <option value="7EF">7º ano do ensino fundamental</option>
+                    <option value="8EF">8º ano do ensino fundamental</option>
+                    <option value="9EF">9º ano do ensino fundamental</option>
+                    <option value="1EM">1º ano do ensino médio</option>
+                    <option value="2EM">2º ano do ensino médio</option>
+                    <option value="3EM">3º ano do ensino médio</option>
+                </select>
+            </div>
+        </div>
+
+
+        <div class="item">
+            <div>Carga horária semanal</div>
+            <div>
+                <input
+                 type="number"
+                 name="workload"
+                 placeholder="Quantas horas irá estudar por semana?"
+                 value="{{student.workload}}">
+            </div>
+        </div>
+
+        
