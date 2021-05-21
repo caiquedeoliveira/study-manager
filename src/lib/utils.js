@@ -1,5 +1,5 @@
 module.exports = {
-    age: timestamp => {
+    age(timestamp) {
         const today = new Date()
         const birth = new Date(timestamp)
 
@@ -14,7 +14,7 @@ module.exports = {
 
         return age
     },
-    graduation: schooling => {
+    graduation(schooling) {
 
         let schoolDegree = ""
 
@@ -30,7 +30,7 @@ module.exports = {
 
         return schoolDegree
     },
-    date: timestamp => {
+    date(timestamp) {
         const date = new Date(timestamp)
 
         const year = date.getUTCFullYear()
@@ -45,7 +45,7 @@ module.exports = {
             birthDay: `${day}/${month}`
         }
     },
-    schooling: schooling => {
+    schooling(schooling) {
 
         let schoolYear = ""
 
