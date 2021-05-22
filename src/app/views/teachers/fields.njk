@@ -25,37 +25,37 @@
             <div>
                 <input 
                 type="date" 
-                name="birth"
-                value="{{teacher.birth}}">
+                name="birth_date"
+                value="{{teacher.birth_date}}">
             </div>
         </div>
 
         <div class="item">
             <div>Grau de escolaridade</div>
             <div>
-                <select name="schooling">
+                <select name="education_level">
                     <option 
                         value="highschool"
-                        {% if teacher.schooling == "highschool" %}
+                        {% if teacher.education_level == "highschool" %}
                             selected
                         {% endif %}>Ensino Médio Completo
                     </option>
                     <option 
                         value="college"
-                        {% if teacher.schooling == "college" %}
+                        {% if teacher.education_level == "college" %}
                             selected
                         {% endif %}>Ensino Superior Completo
                     </option>
                     <option 
                         value="master"
-                        {% if teacher.schooling == "master" %}
+                        {% if teacher.education_level == "master" %}
                             selected
                         {% endif %}
                     >Mestrado
                     </option>
                     <option 
                         value="doctorate"
-                        {% if teacher.schooling == "doctorate" %}
+                        {% if teacher.education_level == "doctorate" %}
                             selected
                         {% endif %}>Doutorado
                     </option>
@@ -69,17 +69,17 @@
                 <span>
                     <input 
                         type="radio" 
-                        name="classtype" 
+                        name="class_type" 
                         value="presencial"
-                        {% if teacher.classtype == "presencial" %}
+                        {% if teacher.class_type == "presencial" %}
                             checked
                         {% endif %}>Presencial</span>
                 <span>
                     <input 
                         type="radio" 
-                        name="classtype" 
+                        name="class_type" 
                         value="à distância"
-                        {% if teacher.classtype == "à distância" %}
+                        {% if teacher.class_type == "à distância" %}
                             checked
                         {% endif %}>À distância</span>
             </div>
@@ -90,9 +90,9 @@
             <div>
                 <input 
                 type="text" 
-                name="services"
+                name="subjects_taught"
                 placeholder="Digite as matérias lecionadas separadas por vírgula"
-                value="{{teacher.services}}">
+                value="{{teacher.subjects_taught}}">
             </div>
         </div>
 

@@ -1,10 +1,13 @@
 const { age, graduation, date } = require('../../lib/utils')
+const Teacher = require('../../models/Teacher')
 
 
 module.exports = {
     index(req,res){
-        return res.render('teachers/index')
-
+        Teacher.all(teacher => {
+            
+            return res.render('teachers/index', {teachers})
+        })
     },
     create(req,res){
         return res.render('teachers/create')
@@ -18,19 +21,32 @@ module.exports = {
                 return res.send('Please, fill all the fields!')
             }
         }
-    
-        let {avatar_url, name, birth, schooling, classtype, services} = req.body
 
-        return
+        Teacher.create(req.body, teacher => {
+            return res.redirect(`/teachers/${teacher.id}`)
+        })
 
     },
     show(req,res){
-        return
+        Teacher.find(req.params.id, teacher => {
+            if(!teacher) return res.send('Teacher not found')
+
+            teacher.age = age(teacher.birth_date)
+            teacher.subjects_taught = teacher.subjects_taught.split(",")
+            teacher.education_level = graduation(teacher.education_level)
+            teacher.created_at = date(teacher.created_at).format
+
+            return res.render('teachers/show', {teacher})
+        })
 
     },
     edit(req,res){
+        Teacher.find(req.params.id, teacher => {
+            if(!teacher) return res.send("Teacher not found!")
 
-        return
+            return res.render("teachers/edit", {teacher})
+        })
+        
     },
     put(req,res){
 
@@ -42,13 +58,15 @@ module.exports = {
             }
         }
     
-        let {avatar_url, name, birth, schooling, classtype, services} = req.body
-
-        return
+        Teacher.update(req.body, ()=>{
+            return res.redirect(`/teachers/${req.body.id}`)
+        })
 
     },
     delete(req,res){
-        return
+        Teacher.delete(req.body.id, ()=>{
+            return res.redirect('/teachers')
+        })
 
     },
 }

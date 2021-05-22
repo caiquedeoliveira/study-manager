@@ -42,7 +42,8 @@ module.exports = {
             month,
             day,
             iso: `${year}-${month}-${day}`,
-            birthDay: `${day}/${month}`
+            birthDay: `${day}/${month}`,
+            format: `${day}/${month}/${year}`
         }
     },
     schooling(schooling) {
