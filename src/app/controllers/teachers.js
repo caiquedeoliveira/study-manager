@@ -4,7 +4,15 @@ const Teacher = require('../../models/Teacher')
 
 module.exports = {
     index(req,res){
-        Teacher.all(teacher => {
+        Teacher.all(allTeachers => {
+            
+            const teachers = allTeachers.map(teacher => {
+                let newTeacher = {
+                    ...teacher,
+                    subjects_taught: teacher.subjects_taught.split(",")
+                }
+                return newTeacher
+            })
             
             return res.render('teachers/index', {teachers})
         })
@@ -43,6 +51,8 @@ module.exports = {
     edit(req,res){
         Teacher.find(req.params.id, teacher => {
             if(!teacher) return res.send("Teacher not found!")
+
+            teacher.birth_date = date(teacher.birth_date).iso
 
             return res.render("teachers/edit", {teacher})
         })
