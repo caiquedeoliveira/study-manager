@@ -36,8 +36,8 @@
             <div>
                 <input 
                 type="date" 
-                name="birth"
-                value="{{student.birth}}">
+                name="birth_date"
+                value="{{student.birth_date}}">
             </div>
         </div>
 
@@ -60,7 +60,7 @@
                     <option value="2EM" 
                     {% if student.school_year == "2EM" %} selected {% endif %}>2º ano do ensino médio</option>
                     <option value="3EM" 
-                    {% if student.school_year == "_year" %} selected {% endif %}>3º ano do ensino médio</option>
+                    {% if student.school_year == "3EM" %} selected {% endif %}>3º ano do ensino médio</option>
                 </select>
             </div>
         </div>
