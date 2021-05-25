@@ -300,3 +300,33 @@ tbody tr td.school_year span {
 .table-container {
     box-sizing: content-box;
 }
+
+/* FILTERS */
+
+.table-container .header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.table-container .header a {
+    margin: 0;
+    width: 120px;
+}
+
+.table-container .header form {
+    display: grid;
+    grid-template-columns: 1fr 120px;
+    align-items: center;
+    gap: 8px;
+}
+
+.table-container .header form input {
+    padding: 8px 8px;
+    font-size: 14px;
+}
+
+.table-container .header form button {
+    margin: 0;
+}
