@@ -67,7 +67,7 @@ header{
 .card {
     background-color: var(--color-gray);
     max-width: 850px;
-    min-height: 500px;
+    min-height: 400px;
     margin: 45px auto;
     display: grid;
     grid-template-columns: 40% 60%;
@@ -329,4 +329,33 @@ tbody tr td.school_year span {
 
 .table-container .header form button {
     margin: 0;
+}
+
+
+.table-container {
+    display: grid;
+    grid-template: 64px 1fr 16px / 1fr;
+}
+
+.table-container .header {
+    margin: 0;
+    align-self: start;
+}
+
+.table-container .pagination {
+    margin: 0;
+    align-self: end;
+    justify-self: center;
+}
+
+.pagination a,
+.pagination span {
+    color: var(--color-blue);
+    text-decoration: none;
+    margin-right: 24px;
+}
+
+.pagination a:hover {
+    filter: brightness(0.3);
+    border-bottom: 1px solid var(--color-blue);
 }
