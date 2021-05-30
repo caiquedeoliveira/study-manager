@@ -3,7 +3,7 @@ const db = require('../config/db')
 
 module.exports = {
     all(callback){
-        db.query(`SELECT * FROM students ORDER BY name ASC`, (err, results)=>{
+        db.query(`SELECT * FROM students`, (err, results)=>{
             if(err) throw `Database error ${err}`
 
             callback(results.rows)

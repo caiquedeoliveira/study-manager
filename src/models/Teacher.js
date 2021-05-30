@@ -6,8 +6,7 @@ module.exports = {
         db.query(`SELECT teachers.*, count(students) AS total_students
                 FROM teachers
                 LEFT JOIN students ON (students.teacher_id = teachers.id)
-                GROUP BY teachers.id
-                ORDER BY total_students DESC`, (err, results)=>{
+                GROUP BY teachers.id`, (err, results)=>{
             if(err) throw `Database error ${err}`
 
             callback(results.rows)
@@ -57,7 +56,7 @@ module.exports = {
                 WHERE teachers.name ILIKE '%${filter}%'
                 OR teachers.subjects_taught ILIKE '%${filter}%'
                 GROUP BY teachers.id
-                ORDER BY total_students DESC`, (err, results)=> {
+                `, (err, results)=> {
                     if(err) throw `Database error! ${err}`
 
                     callback(results.rows)
