@@ -274,13 +274,13 @@ tbody tr td:last-child a {
 }
 
 tbody tr td:nth-child(2) span {
-    padding: 8px 12px;
+    padding: 6px 12px;
     background-color: var(--color-white);
     border-radius: 8px;
     margin-right: 4px;
     margin-top: 8px;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
     color: var(--color-blue)
 }
@@ -297,9 +297,7 @@ tbody tr td.school_year span {
     font-weight: bold;
 }
 
-.table-container {
-    box-sizing: content-box;
-}
+
 
 /* FILTERS */
 
@@ -334,7 +332,8 @@ tbody tr td.school_year span {
 
 .table-container {
     display: grid;
-    grid-template: 64px 1fr 16px / 1fr;
+    grid-template: 64px 1fr 56px / 1fr;
+    align-items: center;
 }
 
 .table-container .header {
