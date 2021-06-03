@@ -22,7 +22,7 @@ module.exports = {
                     page
                 }
 
-               const teachers = selectedTeachers.map(teacher => {
+                const teachers = selectedTeachers.map(teacher => {
                     const fixSubject = {
                         ...teacher,
                         subjects_taught: teacher.subjects_taught.split(",")
